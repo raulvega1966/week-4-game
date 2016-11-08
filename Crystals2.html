@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework #4.1 - CRYSTALS GAME By Raul Vega</title>
+
+ <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+  <!-- Link to Bootstrap-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+
+<!-- Setting Container-->
+<div class="container">
+    
+        <div class="panel-body">
+            <div class="text-center">
+              <button id="diamond1Button" class="btn btn-primary number" value="firstdiamond"><img src="assets/images/AmethystGem2.png" width="30" height="30"> 1</button>
+            </div>
+          </div>
+  
+  </div>
+
+    <!-- Write code here!-->
+      <script type="text/javascript">
+
+
+// When the user presses a key, it will run the following function...
+$(document).ready(function(){
+
+      // Make variables global
+          var randomNumber = Math.floor((Math.random() * 120) + 19);
+          var diamond1 = Math.floor((Math.random() * 12) + 1);
+          var diamond2 = Math.floor((Math.random() * 12) + 1);
+          var diamond3 = Math.floor((Math.random() * 12) + 1);
+          var diamond4 = Math.floor((Math.random() * 12) + 1);
+          var playersum = 0;
+          var operator = "";
+          var isOperatorChosen;
+
+        console.log("randomNumber by comp: " + randomNumber);
+        console.log("diamond1: " + diamond1);
+        console.log("diamond2: " + diamond2);
+        console.log("diamond3: " + diamond3);
+        console.log("diamond4: " + diamond4);
+
+        //playersum = diamond1 + diamond2;
+        //console.log("diamond 1 + 2: " + playersum);
+
+
+   // Add an on click listener to all elements that have the class "number"
+      $(".number").on("click", function() {
+
+        if (operator === "diamond1") {
+          playersum = playersum + diamond1;
+          console.log("playersum first if statement: " + playersum);
+        }
+
+        playersum = playersum + diamond1;
+      console.log("here is the player sum: " + playersum);
+
+      $("#playersum").html(playersum);
+      });
+
+})
+
+	</script>
+
+</div>
+</body>
+</html>
