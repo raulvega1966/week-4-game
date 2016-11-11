@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+
+        <title>Homework #4.1 - CRYSTALS GAME By Raul Vega</title>
+
+        <!-- Added link to the jQuery Library -->
+            <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+        <!--Added link to Bootstrap-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!--Added link to stylesheet css-->
+            <link rel="stylesheet" type="text/css" href="assets/css/crystalstyle.css">
+
+</head>
+        
+        <!--Setting Container-->
+          <div class="container">
+
+            <!--Set background color-->
+                <body background="http://www.easyfreepatterns.com/patterns/1/-background-twitter-backgrounds-wallpaper-images-1598.jpg">
+
+            <!-- When we start playing the game, our HTML will be placed into this div.--> 
+                    <div id="game"></div>
+
+
+            <!--First Row: Title -->
+                <div class="row">
+                    <div class="col-lg-3"><h1>CRYSTALS COLLECTOR!</h1>
+                    </div>
+                </div>
+                <br>
+
+
+            <!--Second Row: Game Instructions -->
+                <div class="row">
+                    <div class="col-md-5">
+                    <p>You will be given a random number at the start of the game.</p>
+                    <p>There are four crystals below. By clicking on a crstal you will add a specific amount of points to your total score.</p>
+                    <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+                    <p>Good Luck</p>
+                    </div>
+                </div>
+                <br>
+
+
+            <!--Third Row Column 1: Here we have the div where the random number to be guessed by player will be located.
+            Third Row Column 2: The second column contains the quantity of wins and losses-->
+                <div class="row">
+                    <div class="col-md-2"><p>Random Number Guessed:</p><span id="randomNumber"></span></div>
+
+                    <div class="col-sm-1"><p></p></div>
+
+                    <div class="col-md-2"><p>Wins: </p><span id="wins"></span><p>Losses: </p><span id="losses"></span></div>
+                </div>
+                <br>
+
+         
+            <!--Fourth Row: Contains the Diamond buttons-->
+                <div class="panel-body">
+                    <div class="text-center">
+                        <button id="diamond1Button" class="btn btn-primary number" value="diamond1"><img src="assets/images/AmethystGem2.png" width="30" height="30"></button>
+
+                        <button id="diamond2Button" class="btn btn-primary number" value="diamond2"><img src="assets/images/emerald.png" width="30" height="30"></button>
+
+                        <button id="diamond3Button" class="btn btn-primary number" value="diamond3"><img src="assets/images/Emerald_TradBlueSapph.jpg" width="30" height="30"></button>
+              
+                        <button id="diamond4Button" class="btn btn-primary number" value="diamond4"><img src="assets/images/ruby_312068.jpg" width="30" height="30"></button>
+                    </div>
+                </div>
+                <br>
+
+
+            <!--Fifth Row: Text Your total score is-->
+                <div class="row">
+                    <div class="col-md-3"><p>Your total score is:  </p></div>
+                </div>
+                <br>
+
+
+            <!--Sixth Row: The current total score of the player is displayed-->
+                <div class="col-md-1"><p></p><span id="playersum"></span></div>
+
+        </div>
+
+
+        <!-- Link to Javascript file -->
+          <script type="text/javascript" href="assets/javascript/game.js"></script>
+
+
+              </body>
+</html>
